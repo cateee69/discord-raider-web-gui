@@ -1,0 +1,109 @@
+.content {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+  }
+  body{
+    background-color: rgb(44, 44, 44);
+    text-align: center;
+  }
+  h1{
+    font-family:verdana;
+    color:turquoise;
+    text-align: center;
+  }
+  h2{
+    font-family:verdana;
+    color:turquoise;
+    text-align: center;
+  }
+  p{
+    font-family:verdana;
+    color:turquoise;
+    text-align: center;
+  }
+  a{
+    font-family:verdana;
+    color:turquoise;
+    text-align: center;
+  }
+  b{
+    font-family:verdana;
+    color:turquoise;
+    text-align: center;
+  }
+.filecustom {
+    border: 1px solid turquoise;
+    background-color: #3d3d3d;
+    color: turquoise;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+  div {
+    width: 800px;
+    margin: center;
+    text-align: center;
+}
+  .button {
+    background-color: #3d3d3d;
+    border: none;
+    color: turquoise;
+    padding: 7px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    margin: 6px 2px;
+    cursor: pointer;
+    font-family: verdana;
+}
+.buttonsmall {
+    background-color: #3d3d3d;
+    border: none;
+    color: turquoise;
+    padding: 6px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 8px;
+    cursor: pointer;
+    font-family: verdana;
+  }
+  textarea{
+    background-color: rgb(64, 64, 64);
+    color: white;
+    resize: none;
+    font-family:verdana;
+    font-size: 12px;
+  }
+label{
+    font-family:verdana;
+    font-size: 18px;
+    color:turquoise;
+}
+.hiddentext{
+  display: none;
+}
+.image-preview {
+  width: 300px;
+  min-height: 200px;
+  margin: 0 auto;
+  border: 2px solid silver;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: silver;
+}
+.image-preview__image{
+  display: none;
+  width: 100%
+}
+.image-preview__default-text{
+  border: none;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  scale: 100%;
+}
