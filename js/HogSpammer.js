@@ -8,7 +8,7 @@ HogSpammer v1.4
 ░░░╚═╝░░░╚═╝░░╚═╝╚══════╝  ╚═════╝░╚══════╝░░░╚═╝░░░╚═╝░░╚══════╝╚═╝░░╚═╝  ╚═╝░░░░░╚═╝░╚═════╝░
 Created by the sewer pig.
 */
-const API_URL = "https://discord.com/api/v8";
+const API_URL = "https://discord.com/api/v9";
 const UserAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36';
 const XSuperProperties = 'ewogICAib3MiOiJXaW5kb3dzIiwKICAgImJyb3dzZXIiOiJGaXJlZm94IiwKICAgImRldmljZSI6IiIsCiAgICJicm93c2VyX3VzZXJfYWdlbnQiOiJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvODcuMC40MjgwLjg4IFNhZmFyaS81MzcuMzYiLAogICAiYnJvd3Nlcl92ZXJzaW9uIjoiODcuMC40MjgwLjg4IiwKICAgIm9zX3ZlcnNpb24iOiIxMCIsCiAgICJyZWZlcnJlciI6IiIsCiAgICJyZWZlcnJpbmdfZG9tYWluIjoiIiwKICAgInJlZmVycmVyX2N1cnJlbnQiOiIiLAogICAicmVmZXJyaW5nX2RvbWFpbl9jdXJyZW50IjoiIiwKICAgInJlbGVhc2VfY2hhbm5lbCI6InN0YWJsZSIsCiAgICJjbGllbnRfYnVpbGRfbnVtYmVyIjo3MzgwNiwKICAgImNsaWVudF9ldmVudF9zb3VyY2UiOm51bGwKfQ==';
 function sleep(ms) {
